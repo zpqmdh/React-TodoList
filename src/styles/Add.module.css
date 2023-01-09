@@ -1,0 +1,11 @@
+/* 할 일을 작성하는 란 */
+.addInput {
+  width: 300px;
+}
+
+/* 할 일을 추가하는 버튼 */
+.addBtn {
+  background: none;
+  outline: none;
+  border: none;
+}

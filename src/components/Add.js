@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import styles from "../styles/Add.module.css";
 function Add({ TodoList, setTodoList }) {
   const [Title, setTitle] = useState("");
 
@@ -18,12 +18,13 @@ function Add({ TodoList, setTodoList }) {
     <div>
       <form onSubmit={onSubmit}>
         <input
+          className={styles.addInput}
           onChange={onChange}
           value={Title}
           type="text"
           placeholder="할 일을 추가하세요 :)"
         />
-        <button>추가</button>
+        <button className={styles.addBtn}>➕</button>
       </form>
     </div>
   );

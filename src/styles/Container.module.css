@@ -1,10 +1,6 @@
-/* 전체 배경 */
-body {
-  background-color: #a593e0;
-}
 /* 컨테이너 배경 */
 .container {
-  background-color: #fffff3;
+  background-color: red;
   width: 500px;
   border-radius: 5px;
   place-items: center;

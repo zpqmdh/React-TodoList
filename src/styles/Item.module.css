@@ -1,0 +1,15 @@
+/* 체크한 할 일 */
+.checked {
+  text-decoration: line-through;
+  color: #a593e0;
+}
+
+.text {
+  color: #566270;
+}
+
+.delBtn {
+  background: none;
+  outline: none;
+  border: none;
+}

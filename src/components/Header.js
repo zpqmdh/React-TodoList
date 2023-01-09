@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../App.module.css";
+import styles from "../styles/Header.module.css";
 import moment from "moment"; // 날짜
 import "moment/locale/ko";
 function Header({ TodoList }) {

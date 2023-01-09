@@ -1,18 +1,32 @@
 import { useState } from "react";
-import styles from "./App.module.css";
+import Container from "./components/Container";
 import Header from "./components/Header";
 import Item from "./components/Item";
 import Add from "./components/Add";
+import styles from "./App.module.css";
 function App() {
-  // useState에 string -> object
   const [TodoList, setTodoList] = useState([]);
+  let UncompletedList = TodoList.filter((item) => item.isChecked === false);
+  let CompletedList = TodoList.filter((item) => item.isChecked === true);
 
   return (
     <div className={styles.container}>
       <Header TodoList={TodoList} />
+      <hr />
       <Add TodoList={TodoList} setTodoList={setTodoList} />
       <hr />
-      {TodoList.map((item, index) => {
+      {UncompletedList.map((item, index) => {
+        return (
+          <Item
+            key={index}
+            item={item}
+            TodoList={TodoList}
+            setTodoList={setTodoList}
+          />
+        );
+      })}
+      <hr />
+      {CompletedList.map((item, index) => {
         return (
           <Item
             key={index}

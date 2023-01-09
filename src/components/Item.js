@@ -1,6 +1,6 @@
 import React from "react";
 // import { useState } from "react";
-import styles from "../App.module.css";
+import styles from "../styles/Item.module.css";
 function Item({ item, TodoList, setTodoList }) {
   // 할 일 삭제
   const delBtn = () => {
@@ -10,15 +10,15 @@ function Item({ item, TodoList, setTodoList }) {
   // 할 일 체크박스 선택/해제
   const onChange = () => {
     const changeState = { title: item.title, isChecked: !item.isChecked };
-    let temp = [];
+    let tempTodoList = [];
     for (let i = 0; i < TodoList.length; i++) {
       if (TodoList[i].title !== item.title) {
-        temp.push(TodoList[i]);
+        tempTodoList.push(TodoList[i]);
       } else {
-        temp.push(changeState);
+        tempTodoList.push(changeState);
       }
     }
-    setTodoList(temp);
+    setTodoList(tempTodoList);
   };
   return (
     <div>
@@ -26,9 +26,7 @@ function Item({ item, TodoList, setTodoList }) {
         type="checkbox"
         id="checkbox"
         checked={item.isChecked}
-        onChange={() => {
-          onChange();
-        }}
+        onChange={() => onChange()}
       />
       <label
         htmlFor="checkbox"
@@ -36,7 +34,9 @@ function Item({ item, TodoList, setTodoList }) {
       >
         {item.title}
       </label>
-      <button onClick={delBtn}>삭제</button>
+      <button className={styles.delBtn} onClick={delBtn}>
+        ❌
+      </button>
     </div>
   );
 }
