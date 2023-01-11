@@ -1,6 +1,8 @@
 /* 할 일을 작성하는 란 */
 .addInput {
   width: 300px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 /* 할 일을 추가하는 버튼 */

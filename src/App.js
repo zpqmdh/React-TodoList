@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Container from "./components/Container";
+// import Container from "./components/Container";
 import Header from "./components/Header";
 import Item from "./components/Item";
 import Add from "./components/Add";
@@ -13,29 +13,32 @@ function App() {
     <div className={styles.container}>
       <Header TodoList={TodoList} />
       <hr />
-      <Add TodoList={TodoList} setTodoList={setTodoList} />
-      <hr />
-      {UncompletedList.map((item, index) => {
-        return (
-          <Item
-            key={index}
-            item={item}
-            TodoList={TodoList}
-            setTodoList={setTodoList}
-          />
-        );
-      })}
-      <hr />
-      {CompletedList.map((item, index) => {
-        return (
-          <Item
-            key={index}
-            item={item}
-            TodoList={TodoList}
-            setTodoList={setTodoList}
-          />
-        );
-      })}
+      <div className={styles.center}>
+        <Add TodoList={TodoList} setTodoList={setTodoList} />
+
+        <hr />
+        {UncompletedList.map((item, index) => {
+          return (
+            <Item
+              key={index}
+              item={item}
+              TodoList={TodoList}
+              setTodoList={setTodoList}
+            />
+          );
+        })}
+        <hr />
+        {CompletedList.map((item, index) => {
+          return (
+            <Item
+              key={index}
+              item={item}
+              TodoList={TodoList}
+              setTodoList={setTodoList}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
