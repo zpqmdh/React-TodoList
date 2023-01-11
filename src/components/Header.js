@@ -6,7 +6,19 @@ function Header({ TodoList }) {
   return (
     <div>
       <h1 className={styles.head}>
-        💜 {moment().format("YYYY/MM/DD")}의 할 일 🤍
+        <div>
+          <img
+            className={styles.heart_img}
+            src="img/purple_heart.png"
+            alt="heart"
+          />
+          {moment().format("YYYY/MM/DD")}의 할 일
+          <img
+            className={styles.heart_img}
+            src="img/purple_heart.png"
+            alt="heart"
+          />
+        </div>
       </h1>
       <h2 className={styles.remain}>
         남은 할 일의 개수:{" "}

@@ -35,7 +35,7 @@ function Item({ item, TodoList, setTodoList }) {
         {item.title}
       </label>
       <button className={styles.delBtn} onClick={delBtn}>
-        ❌
+        <img className={styles.img} src="img/close.png" alt="close" />
       </button>
     </div>
   );

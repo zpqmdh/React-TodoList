@@ -1,6 +1,7 @@
 /* 할 일을 작성하는 란 */
 .addInput {
-  width: 300px;
+  width: 350px;
+  height: 30px;
   text-align: center;
   vertical-align: middle;
   font-family: "Humanbumsuk";
@@ -11,4 +12,16 @@
   background: none;
   outline: none;
   border: none;
+}
+
+.img {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

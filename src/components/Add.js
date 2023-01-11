@@ -16,7 +16,7 @@ function Add({ TodoList, setTodoList }) {
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <form className={styles.center} onSubmit={onSubmit}>
         <input
           className={styles.addInput}
           onChange={onChange}
@@ -24,7 +24,9 @@ function Add({ TodoList, setTodoList }) {
           type="text"
           placeholder="할 일을 작성하세요 :)"
         />
-        <button className={styles.addBtn}>➕</button>
+        <button className={styles.addBtn}>
+          <img className={styles.img} src="img/plus.png" alt="plus" />
+        </button>
       </form>
     </div>
   );
