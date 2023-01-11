@@ -22,7 +22,7 @@ function Add({ TodoList, setTodoList }) {
           onChange={onChange}
           value={Title}
           type="text"
-          placeholder="할 일을 추가하세요 :)"
+          placeholder="할 일을 작성하세요 :)"
         />
         <button className={styles.addBtn}>➕</button>
       </form>

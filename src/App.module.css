@@ -7,15 +7,16 @@ body {
   background-color: #fffff3;
   width: 500px;
   border-radius: 5px; /*사각형 둥근 정도*/
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
 }
 .center {
   text-align: center;
+}
+
+@font-face {
+  font-family: "Humanbumsuk";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }

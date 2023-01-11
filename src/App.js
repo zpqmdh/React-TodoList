@@ -3,7 +3,9 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Item from "./components/Item";
 import Add from "./components/Add";
+import Line from "./components/Line";
 import styles from "./App.module.css";
+
 function App() {
   const [TodoList, setTodoList] = useState([]);
   let UncompletedList = TodoList.filter((item) => item.isChecked === false);
@@ -12,11 +14,12 @@ function App() {
   return (
     <div className={styles.container}>
       <Header TodoList={TodoList} />
-      <hr />
+
       <div className={styles.center}>
+        <Line />
         <Add TodoList={TodoList} setTodoList={setTodoList} />
 
-        <hr />
+        <Line />
         {UncompletedList.map((item, index) => {
           return (
             <Item
@@ -27,7 +30,7 @@ function App() {
             />
           );
         })}
-        <hr />
+        <Line />
         {CompletedList.map((item, index) => {
           return (
             <Item

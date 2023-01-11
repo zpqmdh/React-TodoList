@@ -2,10 +2,12 @@
 .checked {
   text-decoration: line-through;
   color: #a593e0;
+  font-family: "Humanbumsuk";
 }
 
 .text {
   color: #566270;
+  font-family: "Humanbumsuk";
 }
 
 .delBtn {
