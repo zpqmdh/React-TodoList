@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import Container from "./components/Container";
 import Header from "./components/Header";
 import Item from "./components/Item";
@@ -10,7 +10,15 @@ function App() {
   const [TodoList, setTodoList] = useState([]);
   let UncompletedList = TodoList.filter((item) => item.isChecked === false);
   let CompletedList = TodoList.filter((item) => item.isChecked === true);
-
+  useEffect(() => {
+    const localTodoList = localStorage.getItem("TodoList");
+    if (localTodoList) {
+      setTodoList(JSON.parse(localTodoList));
+    }
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("TodoList", JSON.stringify(TodoList));
+  }, [TodoList]);
   return (
     <div className={styles.container}>
       <Header TodoList={TodoList} />
